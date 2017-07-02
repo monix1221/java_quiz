@@ -1,0 +1,41 @@
+<resources>
+    <string name="app_name" translatable="false">Java Quiz</string>
+    <string name="Java_Quiz" translatable="false">Java Quiz</string>
+    <string name="welcome_text_below_title">Answer the questions below and check out your score below. The questions test your Java basic knowledge</string>
+    <string name="question_1_title">Question 1</string>
+    <string name="question_2_title">Question 2</string>
+    <string name="question_3_title">Question 3</string>
+    <string name="question_4_title">Question 4</string>
+    <string name="question_5_title">Question 5</string>
+    <string name="question_6_title">Question 6</string>
+    <string name="question_7_title">Question 7</string>
+    <string name="question_8_title">Question 8</string>
+    <string name="question_9_title">Question 9</string>
+    <string name="question_10_title">Question 10</string>
+    <string name="question_1_contents">Can an interface have a method with a body? (Java 8)</string>
+    <string name="question_2_contents">What is a java word signature you would use for a method that, when called by a thread, blocks the access to the object so that no other thread can use the object while the thread is exectuing the method?</string>
+    <string name="question_3_contents">What are the two classes that inherit from Throwable?</string>
+    <string name="question_4_contents">What will be the result of printing the following on the screen? \na)new String(\"abc\").equals(\"abc\");\nb)new String(\"abc\") == \"abc\";\nc)new String(\"abc\") == new String(\"abc\");\nd)\"abc\" == \"abc\";</string>
+    <string name="question_5_contents">Will the default constructor be created when you\'ve already declared a constructor with some parameters?</string>
+    <string name="question_6_contents">What is a java keyword you would use to tell that a variable, method or a block gets a memory only once, during the creation (at the time of class loading)?</string>
+    <string name="question_7_contents">How many objects will be created in the following code?\nString s1=\"Welcome\"; \nString s2=\"Welcome\"; \nString s3=\"Welcome\";</string>
+    <string name="question_8_contents">How many objects will be created in the following code?\nString s = new String(\"Welcome\");</string>
+    <string name="question_9_contents">Which of the words below describe every field in an interface?</string>
+    <string name="question_10_contents">Here is a samle question about Java. Read the text and give your answer below</string>
+    <string name="check_your_answers">Click the button below to see your score or try again!</string>
+    <string name="my_score_button">my score</string>
+    <string name="reset_button">try again</string>
+    <string name="tfft_booleans" translatable="false">true, false, false, true</string>
+    <string name="ttft_booleans" translatable="false">true, true, false, true</string>
+    <string name="tttt_booleans" translatable="false">true, true, true, true</string>
+    <string name="tttf_booleans" translatable="false">true, true, true, false</string>
+    <string name="tftt_booleans" translatable="false">true, false, true, true</string>
+    <string name="public_word" translatable="false">public</string>
+    <string name="static_word" translatable="false">static</string>
+    <string name="private_word" translatable="false">private</string>
+    <string name="final_word" translatable="false">final</string>
+    <string name="your_score">You got: 10 points! Good job!</string>
+    <string name="synchronized_answer" translatable="false">synchronized</string>
+    <string name="you_got_text">You got: </string>
+    <string name="points_text">points!</string>
+</resources>
