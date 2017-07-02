@@ -13,7 +13,7 @@
         android:layout_height="match_parent"
         android:background="@color/colorPrimaryLight"
         android:orientation="vertical"
-        android:padding="8dp">
+        android:padding="@dimen/min_padding">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -38,11 +38,6 @@
                 android:layout_margin="@dimen/basic_padding"
                 android:text="@string/welcome_text_below_title"
                 android:textAlignment="center" />
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="2dp"
-                android:background="@color/divider" />
 
             <!-- Question 1 -->
             <TextView
@@ -71,7 +66,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="@dimen/min_padding"
                     android:layout_weight="1"
-                    android:text="yes" />
+                    android:text="@string/yes_text" />
 
                 <RadioButton
                     android:id="@+id/q1_wrong_ans_button"
@@ -79,7 +74,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="@dimen/min_padding"
                     android:layout_weight="1"
-                    android:text="no" />
+                    android:text="@string/no_text" />
             </RadioGroup>
 
             <!-- Question 2 -->
@@ -209,7 +204,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="@dimen/min_padding"
                     android:layout_weight="1"
-                    android:text="yes" />
+                    android:text="@string/yes_text" />
 
                 <RadioButton
                     android:id="@+id/q5_correct_ans_radio_button"
@@ -217,7 +212,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="@dimen/min_padding"
                     android:layout_weight="1"
-                    android:text="no" />
+                    android:text="@string/no_text" />
             </RadioGroup>
 
             <!-- Question 6 -->

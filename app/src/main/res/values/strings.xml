@@ -38,4 +38,13 @@
     <string name="synchronized_answer" translatable="false">synchronized</string>
     <string name="you_got_text">You got: </string>
     <string name="points_text">points!</string>
+    <string name="yes_text">yes</string>
+    <string name="no_text">no</string>
+    <string name="error_text" translatable="false">error</string>
+    <string name="exception_text" translatable="false">exception</string>
+    <string name="static_text" translatable="false">static</string>
+    <string name="one_text">one</string>
+    <string name="one_sign_text" translatable="false">1</string>
+    <string name="two_sign_text" translatable="false">2</string>
+    <string name="two_text">two</string>
 </resources>
