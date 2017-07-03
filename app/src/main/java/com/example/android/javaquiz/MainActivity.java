@@ -1,6 +1,7 @@
 package com.example.android.javaquiz;
 
 import android.databinding.DataBindingUtil;
+import android.support.v4.content.res.ResourcesCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -9,6 +10,8 @@ import android.widget.Toast;
 import com.example.android.javaquiz.databinding.ActivityMainBinding;
 
 import java.util.HashMap;
+
+import es.dmoral.toasty.Toasty;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -30,17 +33,22 @@ public class MainActivity extends AppCompatActivity {
             USER_SCORE = savedInstanceState.getInt(KEEP_USER_SCORE_KEY);
             binding.displayScoreTextView.setText(savedInstanceState.getString(KEEP_SCORE_MESSAGE));
             displayScoreMessage();
-
         }
 
         questionViews = new HashMap<Integer, Boolean>();
         fillMapOfAnswers(questionViews);
 
         setOnClickListenersForButtons();
+
+        configureToastParams();
+    }
+
+    public void configureToastParams(){
+        Toasty.Config.getInstance().setInfoColor(ResourcesCompat.getColor(getResources(), R.color.colorAccent, null)).setTextColor(ResourcesCompat.getColor(getResources(), R.color.primary_text, null)).apply();
     }
 
 
-    public void setOnClickListenersForButtons() {
+    private void setOnClickListenersForButtons() {
         binding.submitScoreButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -70,7 +78,7 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 
-    public void setHighlightBackgroundForAnswers() {
+    private void setHighlightBackgroundForAnswers() {
 
         fillMapOfAnswers(questionViews);
 
@@ -144,7 +152,7 @@ public class MainActivity extends AppCompatActivity {
         savedInstanceState.getString(KEEP_SCORE_MESSAGE);
     }
 
-    public void clearHighlightBackgroundForAnswers() {
+    private void clearHighlightBackgroundForAnswers() {
         binding.q1Radiogroup.setBackgroundResource(R.color.colorDefaultBackground);
         binding.q2EditText.setBackgroundResource(R.color.colorDefaultBackground);
         binding.q3EditText.setBackgroundResource(R.color.colorDefaultBackground);
@@ -156,7 +164,7 @@ public class MainActivity extends AppCompatActivity {
         binding.q9Checkboxgroup.setBackgroundResource(R.color.colorDefaultBackground);
     }
 
-    public void clearAllAnswers() {
+    private void clearAllAnswers() {
         binding.q1WrongAnsButton.setChecked(false);
         binding.q1CorrectAnsButton.setChecked(false);
         binding.q2EditText.setText("");
@@ -177,13 +185,13 @@ public class MainActivity extends AppCompatActivity {
         binding.q9Count3Checkbox.setChecked(false);
     }
 
-    public void displayScoreMessage() {
+    private void displayScoreMessage() {
         binding.displayScoreTextView.setVisibility(View.VISIBLE);
         binding.displayScoreTextView.setText(getString(R.string.you_got_text) +" "+ USER_SCORE + "/9 !");
-        Toast.makeText(this, getString(R.string.you_got_text)+" " + USER_SCORE +" "+ getString(R.string.points_text), Toast.LENGTH_SHORT).show();
+        Toasty.info(this, getString(R.string.you_got_text)+" " + USER_SCORE +" "+ getString(R.string.points_text), Toast.LENGTH_SHORT).show();
     }
 
-    public void hideScoreMessage() {
+    private void hideScoreMessage() {
         binding.displayScoreTextView.setVisibility(View.GONE);
     }
 
